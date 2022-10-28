@@ -12,4 +12,4 @@ A simple way to evaluate the data can be downloaded from Spotify.
 ## Links (temp)
 
 [Understanding my Data](https://support.spotify.com/us/article/understanding-my-data/)
-(Web-API)[https://developer.spotify.com/documentation/web-api/]
+[Web-API](https://developer.spotify.com/documentation/web-api/)
