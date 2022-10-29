@@ -1,2 +1,6 @@
 data/**/*
 SongHistory.json
+StreamingHistory.json
+.ipynb_checkpoints/**/*
+api-test.js
+index.html

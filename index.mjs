@@ -41,10 +41,15 @@ const formatTime = (time) => {
 		.map(({ v, i }) => v + sections[i]).join` `;
 };
 
+// Generate general streaming history
+console.log('Writing Streaming History.json...');
+fs.writeFileSync('StreamingHistory.json', JSON.stringify(streamingHistory, null, 4));
+
+// Generate song listen lengths
+console.log('Writing SongHistory.json...');
 const songHistory = Object.entries(songHistoryMap)
 	.map(([k, v]) => ({ title: k.split`§`[0], artist: k.split`§`[1], msPlayed: v, timeFormatted: formatTime(v) }))
 	.sort((a, b) => b.msPlayed - a.msPlayed);
-
 fs.writeFileSync('SongHistory.json', JSON.stringify(songHistory, null, 4));
 
 console.log(streamingHistory.length, Object.entries(songHistory).length);
